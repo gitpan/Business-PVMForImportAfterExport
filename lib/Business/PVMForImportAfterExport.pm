@@ -4,7 +4,7 @@ use warnings;
 use strict;
 use String::StringLight qw( trim );
 
-our $VERSION = '0.01';
+our $VERSION = '0.02';
 
 BEGIN {
 	use Exporter;

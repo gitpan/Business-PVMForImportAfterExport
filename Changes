@@ -4,3 +4,5 @@ Revision history for Perl extension Business::PVMForImportAfterExport.
 	- original version; created by h2xs 1.23 with options
 		-XA -n Business::PVMForImportAfterExport
 
+0.02  Wed Oct 28 13:52:04 2009
+	- bugfix
