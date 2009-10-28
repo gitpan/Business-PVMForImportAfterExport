@@ -1,27 +1,33 @@
-PVMForImportAfterExport version 0.03
-====================================
+NAME
+    PVMForImportAfterExport - a module for Postversandmanager in Austria
 
-INSTALLATION
+SYNOPSIS
+      use warnings;
+      use strict;
+      use PVMForImportAfterExport qw( PvmDateiErstellen AdresslisteDazu );
 
-To install this module type the following:
+      my $dateiEin      = "Datei.txt";       # Eingabedatei
+      my $dateiPvm      = "DateiPVM.csv";    # Datei für den Import in den Postversandmanager
+      my $aufbau        = "D\t";             # Aufbau der Eingabedatei F = fixe Satzlänge, D = delimited, \t oder ; oder ... = Trennzeichen
+      my $idStelle      = 3;                 # Stelle/Feld der eindeutigen ID
+      my $idLaenge      = 0;                 # Länge der eindeutigen ID (nur bei fixer Satzlänge auszufüllen, ansonsten 0)
+      my $lkzStelle     = 1;                 # Stelle/Feld des LKZ
+      my $lkzLaenge     = 0;                 # Länge des LKZ (nur bei fixer Satzlänge auszufüllen, ansonsten 0)
+      my $plzStelle     = 2;                 # Stelle/Feld der PLZ
+      my $plzLaenge     = 0;                 # Länge der PLZ (nur bei fixer Satzlänge auszufüllen, ansonsten 0)
+      my $buendelung    = "J";               # J = mit Bündelung, N = keine Bündelung
+      my $dateiAdrListe = "Adressliste.csv"; # Name der Adressliste die vom Postversandmanager kommt
+      my $dateiAus      = "Datei.fertig";    # Ausgabedatei
 
-   perl Makefile.PL
-   make
-   make test
-   make install
+      # forwards Import
+      PvmDateiErstellen($dateiEin, $dateiPvm, $aufbau, $idStelle, $idLaenge, $lkzStelle, $lkzLaenge, $plzStelle, $plzLaenge, $buendelung);
+      # ... Postversandmanager works
+      # after Export
+      AdresslisteDazu($dateiAdrListe, $dateiEin, $dateiAus, $idStelle, $idLaenge, $aufbau);
 
-DEPENDENCIES
+DESCRIPTION
+    ...
 
-This module requires these other modules and libraries:
+AUTHOR AND LICENSE
+    copyright 2009 (c) Gernot Havranek
 
-   PVMForImportAfterExport
-
-COPYRIGHT AND LICENCE
-
-Put the correct copyright and licence information here.
-
-Copyright (C) 2009 by Gernot Havranek
-
-This library is free software; you can redistribute it and/or modify
-it under the same terms as Perl itself, either Perl version 5.10.0 or,
-at your option, any later version of Perl 5 you may have available.
