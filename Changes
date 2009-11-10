@@ -12,3 +12,6 @@ Revision history for Perl extension Business::PVMForImportAfterExport.
 
 0.04  Wed Oct 28 21:04:21 2009
 	- problems with authorizations
+
+0.05  Tue Nov 10 11:36:55 2009
+	- problems with tests

@@ -9,7 +9,8 @@ WriteMakefile
           'EXE_FILES' => [],
           'VERSION_FROM' => 'lib/Business/PVMForImportAfterExport.pm',
           'PREREQ_PM' => {
-                           'Test::More' => 0
+                           'Test::More' => 0,
+                           'String::StringLight' => 0
                          }
         )
 ;
